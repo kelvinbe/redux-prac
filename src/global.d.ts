@@ -1,5 +1,8 @@
+type RequireOnly<T, P extends keyof T> = Pick<T, P> & Partial<Omit <T, P>>;
+
+
 type Task = {
-  id: string;
+  id?: string;
   title: string;
   user?: User[id];
   column?: StatusColumn['id'];
